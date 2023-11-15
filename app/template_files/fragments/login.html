@@ -1,0 +1,22 @@
+<div id="login-area">
+    Please log in for Python Pizza:
+    <p/>
+
+    <form hx-post="/login"
+          hx-target="#login-area"
+          hx-swap="outerHTML"
+    >
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br>
+        <br/>
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password" required><br>
+        <div id="login-fail"></div>
+
+        <p/>Note: This example uses temporary cookies.
+        <br/>
+        <button>Login</button>
+
+    </form>
+
+</div>

@@ -1,0 +1,18 @@
+<div id="login-area">
+
+    Login successful.
+
+    <!-- there's a 1 second delay here  -->
+    <!-- change it to 15 seconds later to give you time to examine the html -->
+
+    <div id="set-session"
+         hx-trigger="load delay:1s"
+         hx-on="htmx:beforeRequest: document.cookie = 'session_id={{ session_id }}; path=/;'"
+         hx-get="/"
+         hx-target="#login-area"
+         hx-swap="outerHTML"
+         hx-push-url="true"
+    ></div>
+
+
+</div>

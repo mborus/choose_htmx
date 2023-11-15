@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+
+    <!-- download these and put them in the static_files folder, -->
+    <!-- then change the links to that -->
+
+    <script src="https://unpkg.com/htmx.org@1.9.8"></script>
+    <script src="https://unpkg.com/htmx.org/dist/ext/sse.js"></script>
+    <!-- change version to 1.9.7 and uncomment to use this
+    <script src="https://unpkg.com/htmx.org/dist/ext/response-targets.js"></script>
+    -->
+
+    <!-- this is where you put your own JavaScript -->
+    <script src="static/js/my.js"></script>
+
+</head>
+<body>
+
+    {{ body }}
+
+</body>
+</html>

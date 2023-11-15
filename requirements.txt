@@ -1,0 +1,6 @@
+fastapi
+python-multipart
+jinja2
+starlette
+sse_starlette
+uvicorn

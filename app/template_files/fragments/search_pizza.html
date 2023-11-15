@@ -1,0 +1,9 @@
+<p/> {{ pizza.order_id }} - {{ pizza.name }}
+<br/> {{ pizza.description }}
+<br/> Toppings: {{ pizza.toppings }}
+<br/>Click to <a href="" id="order-pizza-{{ pizza.order_id }}t"
+        hx-trigger="click"
+        hx-get="order_pizza/{{ pizza.order_id }}"
+        hx-target="#main"
+        hx-swap="outerHTML"
+>order</a> this pizza.

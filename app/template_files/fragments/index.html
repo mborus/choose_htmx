@@ -1,0 +1,26 @@
+<div id="main">
+    Welcome at Python Pizza, {{ email }}.
+    <a href="" id="logout"
+       hx-trigger="click"
+       hx-get="logout"
+       hx-target="#main"
+       hx-swap="outerHTML"
+    >(Logout)</a>
+    <p/>Let's order some pizza!
+
+    <p/>
+    <label for="pizza-search">Pizza search by toppings:</label><br/>
+    <input type="text" name="pq" id="pizza-search"
+           hx-get="/search_pizza"
+           hx-trigger="keyup delay:500ms changed"
+           hx-target="#search-results"
+           placeholder="Search by typing toppings..."
+           autofocus
+           autocomplete="off"
+    >
+    <p/>
+    <div id="search-results">
+        Please enter your favorite topping(s) to select a pizza.
+    </div>
+
+</div>

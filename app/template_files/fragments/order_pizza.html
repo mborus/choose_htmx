@@ -1,0 +1,28 @@
+<div id="main">
+    Thank you, {{ email }}
+    <p/>
+
+    Your order is "{{ pizza.name }}".
+    <br/> Toppings: {{ pizza.toppings }}
+
+    <p/>
+
+    Please wait while we make it. Or order <a href="" id="order-more"
+       hx-trigger="click"
+       hx-get="/"
+       hx-target="#main"
+       hx-swap="outerHTML"
+    >more</a>.
+
+    <p/>
+
+    This is the current kitchen status:
+    <br/>
+    <div hx-ext="sse" sse-connect="/kitchen-dashboard" sse-swap="message">
+        ...
+    </div>
+    <p/>
+
+    The current time is <span id="current-time">...</span>
+
+</div>

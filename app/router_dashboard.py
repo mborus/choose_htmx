@@ -47,17 +47,21 @@ async def message_stream(request: Request, session_id: str = Cookie(None)):
                 )
                 current_jobs.append(order_html)
 
+            # while loop continues
+
             if current_jobs:
                 body = "\n".join(current_jobs)
-                # The time is updated as an out of bound element
-                oob_body = (
-                    '<span id="current-time" hx-swap-oob="true">'
-                    f"{datetime.datetime.now():%H:%M:%S}"
-                    "</span>"
-                )
-                yield oob_body + body
             else:
-                yield "There are no pizzas ordered at the moment."
+                body = "There are no pizzas ordered at the moment."
+
+            # The time is updated as an out of bound element
+            oob_body = (
+                '<span id="current-time" hx-swap-oob="true">'
+                f"{datetime.datetime.now():%H:%M:%S}"
+                "</span>"
+            )
+            yield oob_body + body
+
             await asyncio.sleep(1)
 
     return EventSourceResponse(event_generator())

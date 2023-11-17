@@ -14,7 +14,7 @@ The example shows:
 
 Check out https://htmx.org/ for documentation.
 
-👉 Slides will be added shortly after the talk  
+👉 Slides are in the slides folder
 
 ## Installation
 

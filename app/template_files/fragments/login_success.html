@@ -7,7 +7,7 @@
 
     <div id="set-session"
          hx-trigger="load delay:1s"
-         hx-on="htmx:beforeRequest: document.cookie = 'session_id={{ session_id }}; path=/;'"
+         hx-on:htmx:before-request="document.cookie = 'session_id={{ session_id }}; path=/;'"
          hx-get="/"
          hx-target="#login-area"
          hx-swap="outerHTML"

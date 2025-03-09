@@ -38,3 +38,9 @@ Start the program
 
 The user logins are on top of the `fake_backend.py` file, for example user `a@b.c`, password `d`
 
+## Update 2025
+
+👉 Since the session, HTMX was updated to version 2. 
+
+It has a slightly changed syntax, I am updating the example code 
+to work with version 2 even if it means that the slides code is a bit different.
